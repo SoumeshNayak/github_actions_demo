@@ -1,15 +1,19 @@
 name: Hello World
 on: workflow_dispatch #We are trigerring this workflow manually
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello step
-        run: echo "Welcome to Github action Demo class"
+      - name: Build Step
+        run: echo "A demo phase"
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: test hello steps
-        run: |
-          echo "This is the test actions"
-          echo "Here I am testing hello world"
+      - name: Test Step
+        run: echo "A test phase"  
+  delpoy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delploy step
+        run: echo "A Deploy phase"  
+    
