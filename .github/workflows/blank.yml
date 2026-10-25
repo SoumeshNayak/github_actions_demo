@@ -6,3 +6,10 @@ jobs:
     steps:
       - name: Hello step
         run: echo "Welcome to Github action Demo class"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test hello steps
+        run: |
+          echo "This is the test actions"
+          echo "Here I am testing hello world"
