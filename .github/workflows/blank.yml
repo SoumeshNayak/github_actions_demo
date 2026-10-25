@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
-        run: echo "A demo phase"
+        run: echo "A demo phase by ${{ vars.MY_NAME }}"
   
     
