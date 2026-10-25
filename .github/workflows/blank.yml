@@ -1,5 +1,11 @@
 name: Hello World
-on: push # Triggers on push
+on: 
+  push:  # Triggers on push request
+    branches:
+      - main
+  pull_request:  # Triggers when pull request take place in perticular brance
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
