@@ -1,21 +1,10 @@
 name: Hello World
-on: workflow_dispatch #We are trigerring this workflow manually
+on: push # Triggers on push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Build Step
         run: echo "A demo phase"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Test Step
-        run: echo "A test phase"  
-  delpoy:
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - name: Delploy step
-        run: echo "A Deploy phase"  
+  
     
