@@ -1,0 +1,8 @@
+name: Hello World
+on: workflow_dispatch #We are trigerring this workflow manually
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello step
+        run: echo "Welcome to Github action Demo class"
