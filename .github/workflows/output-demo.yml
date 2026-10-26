@@ -1,0 +1,12 @@
+name: output demo
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add the version to output
+        id: step1
+        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+      - name: Access the output from step1
+        run: echo "The version is ${{ steps.step1.outputs.version }}"
+    

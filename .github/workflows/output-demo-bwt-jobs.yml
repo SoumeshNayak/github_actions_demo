@@ -1,0 +1,19 @@
+name: Output Demo Bwt jobs
+on: workflow_dispatch
+jobs:
+  build:
+    outputs:
+      version: ${{ steps.build.outputs.version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add the version
+        id: build
+        run: echo "version=1.0.0" >> $GITHUB_OUTPUT
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying the app
+        id: deploy
+        run: echo "Deploying the app with version ${{ needs.build.outputs.version }}"
+        

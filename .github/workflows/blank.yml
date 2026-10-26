@@ -7,10 +7,12 @@ on:
     branches:
       - main
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Step
-        run: echo "A demo phase"
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print Index.html file
+        run: cat index.html
   
     

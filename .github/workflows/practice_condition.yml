@@ -1,0 +1,22 @@
+name: Practice Conditions
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: build the app
+        run: echo "Building App"
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name =='push' && github.ref_name == 'main'
+    steps:
+      - name: Deploy the app
+        run: echo "Deploy the app"
