@@ -1,0 +1,12 @@
+name: Practice Conditions
+on:
+  pull_request:
+    types: 
+      - opened
+      - synchronize
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the app
+        run: echo "Building App"
