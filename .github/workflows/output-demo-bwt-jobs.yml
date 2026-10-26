@@ -15,5 +15,5 @@ jobs:
     steps:
       - name: Deploying the app
         id: deploy
-        run: echo "Deploying the app with version #{{ needs.build.outputs.version }}"
+        run: echo "Deploying the app with version ${{ needs.build.outputs.version }}"
         
